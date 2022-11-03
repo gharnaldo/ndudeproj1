@@ -6,6 +6,9 @@ from sql_queries import *
 
 
 def process_song_file(cur, filepath):
+    """
+    Extracts the informartion from each file found in song_data folder and insert it into the songs and artists tables in the DB. 
+    """
     # open song file
     df = pd.read_json(filepath, lines=True)
 
@@ -21,6 +24,9 @@ def process_song_file(cur, filepath):
 
 
 def process_log_file(cur, filepath):
+    """
+    Extracts the informartion from each file found in log_data folder and insert it into the time, users and songplays tables in the DB. 
+    """    
     # open log file
     df = pd.read_json(filepath, lines=True) 
 
@@ -75,6 +81,9 @@ def process_log_file(cur, filepath):
 
 
 def process_data(cur, conn, filepath, func):
+    """
+    Reads the specified directory and calls the corresponding function to process it 
+    """     
     # get all files matching extension from directory
     all_files = []
     for root, dirs, files in os.walk(filepath):

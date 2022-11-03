@@ -31,7 +31,7 @@ def drop_tables(cur, conn):
     """
     Drops each table using the queries in `drop_table_queries` list.
     """
-    for query in create_table_queries:
+    for query in drop_table_queries:
         try:
             cur.execute(query)
             conn.commit()
