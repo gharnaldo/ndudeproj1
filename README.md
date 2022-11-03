@@ -8,7 +8,7 @@ The Project carried out several tasks including a Postgres database with tables 
 
 ***
 
-## Scripts execution with python from the root of the project
+## Scripts execution with python from the project's root
 
 ### Create Postgres Database and Tables
 
