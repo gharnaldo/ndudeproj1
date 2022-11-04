@@ -6,6 +6,8 @@ This Project will allow Sparkify Startup analyze the data they've been collectin
 
 The Project carried out several tasks including a Postgres database with tables designed to optimize queries on song play analysis and also provided an ETL pipeline that makes the process efficient.
 
+![Sparkify ER Diagram!](/sparkifydb_erd.png)
+
 ***
 
 ## Scripts execution with python from the project's root
@@ -27,4 +29,5 @@ The Project carried out several tasks including a Postgres database with tables 
 3. **etl.ipynb** reads and processes a single file from song_data and log_data and loads the data into your tables. This notebook contains detailed instructions on the ETL process for each of the tables.
 4. **etl.py** reads and processes files from song_data and log_data and loads them into your tables. You can fill this out based on your work in the ETL notebook.
 5. **sql_queries.py** contains all your sql queries, and is imported into the last three files above.
+
 

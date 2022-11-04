@@ -38,7 +38,7 @@ def process_log_file(cur, filepath):
     df['datetime'] = pd.to_datetime(df['ts'], unit='ms')
     time_data = ()
     #timestamp, hour, day, week of year, month, year, and weekday
-    timestamp = df['ts'].values.tolist()
+    timestamp = df['datetime']
     hour = df['datetime'].dt.hour.values.tolist()
     day = df['datetime'].dt.day.values.tolist()
     weekofyear = df['datetime'].dt.isocalendar().week.values.tolist()
@@ -49,7 +49,7 @@ def process_log_file(cur, filepath):
     
     # insert time data records
     time_data = zip(timestamp,hour,day,weekofyear,month,year,weekday)
-    column_labels = ('ts', 'hour', 'day', 'weekofyear','month','year','weekday')
+    column_labels = ('timestamp', 'hour', 'day', 'weekofyear','month','year','weekday')
     time_df = pd.DataFrame(list(time_data),columns = column_labels)
 
     for i, row in time_df.iterrows():
